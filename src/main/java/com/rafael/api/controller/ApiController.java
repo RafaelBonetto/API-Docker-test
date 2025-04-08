@@ -25,7 +25,8 @@ public class ApiController {
     }
 
     @PostMapping(path = "/tasks")
-    public ResponseEntity<Void> createtask(@RequestBody String task) throws JsonProcessingException {
+    public ResponseEntity<Void> createTask(@RequestBody String task) throws JsonProcessingException {
+        tasks.add("Task");
         tasks.add(task);
         return ResponseEntity.ok().build();
     }
